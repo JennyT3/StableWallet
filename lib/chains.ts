@@ -1,0 +1,223 @@
+export interface Chain {
+  id: string
+  name: string
+  symbol: string
+  rpcUrl: string
+  blockExplorer: string
+  nativeCurrency: {
+    name: string
+    symbol: string
+    decimals: number
+  }
+  testnet?: boolean
+}
+
+export const MAINNET_CHAINS: Chain[] = [
+  {
+    id: "arbitrum",
+    name: "Arbitrum One",
+    symbol: "ARB",
+    rpcUrl: "https://arb1.arbitrum.io/rpc",
+    blockExplorer: "https://arbiscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  },
+  {
+    id: "avalanche",
+    name: "Avalanche C-Chain",
+    symbol: "AVAX",
+    rpcUrl: "https://api.avax.network/ext/bc/C/rpc",
+    blockExplorer: "https://snowtrace.io",
+    nativeCurrency: { name: "Avalanche", symbol: "AVAX", decimals: 18 },
+  },
+  {
+    id: "base",
+    name: "Base",
+    symbol: "BASE",
+    rpcUrl: "https://mainnet.base.org",
+    blockExplorer: "https://basescan.org",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  },
+  {
+    id: "codex",
+    name: "Codex",
+    symbol: "CDX",
+    rpcUrl: "https://rpc.codex.network",
+    blockExplorer: "https://explorer.codex.network",
+    nativeCurrency: { name: "Codex", symbol: "CDX", decimals: 18 },
+  },
+  {
+    id: "ethereum",
+    name: "Ethereum",
+    symbol: "ETH",
+    rpcUrl: "https://mainnet.infura.io/v3/YOUR_KEY",
+    blockExplorer: "https://etherscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  },
+  {
+    id: "linea",
+    name: "Linea",
+    symbol: "LINEA",
+    rpcUrl: "https://rpc.linea.build",
+    blockExplorer: "https://lineascan.build",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  },
+  {
+    id: "optimism",
+    name: "OP Mainnet",
+    symbol: "OP",
+    rpcUrl: "https://mainnet.optimism.io",
+    blockExplorer: "https://optimistic.etherscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+  },
+  {
+    id: "polygon",
+    name: "Polygon PoS",
+    symbol: "MATIC",
+    rpcUrl: "https://polygon-rpc.com",
+    blockExplorer: "https://polygonscan.com",
+    nativeCurrency: { name: "MATIC", symbol: "MATIC", decimals: 18 },
+  },
+  {
+    id: "solana",
+    name: "Solana",
+    symbol: "SOL",
+    rpcUrl: "https://api.mainnet-beta.solana.com",
+    blockExplorer: "https://explorer.solana.com",
+    nativeCurrency: { name: "Solana", symbol: "SOL", decimals: 9 },
+  },
+  {
+    id: "sonic",
+    name: "Sonic",
+    symbol: "SONIC",
+    rpcUrl: "https://rpc.sonic.network",
+    blockExplorer: "https://explorer.sonic.network",
+    nativeCurrency: { name: "Sonic", symbol: "SONIC", decimals: 18 },
+  },
+  {
+    id: "unichain",
+    name: "Unichain",
+    symbol: "UNI",
+    rpcUrl: "https://rpc.unichain.org",
+    blockExplorer: "https://explorer.unichain.org",
+    nativeCurrency: { name: "Unichain", symbol: "UNI", decimals: 18 },
+  },
+  {
+    id: "worldchain",
+    name: "World Chain",
+    symbol: "WLD",
+    rpcUrl: "https://rpc.worldchain.org",
+    blockExplorer: "https://explorer.worldchain.org",
+    nativeCurrency: { name: "World", symbol: "WLD", decimals: 18 },
+  },
+]
+
+export const TESTNET_CHAINS: Chain[] = [
+  {
+    id: "arbitrum-sepolia",
+    name: "Arbitrum Sepolia",
+    symbol: "ARB",
+    rpcUrl: "https://sepolia-rollup.arbitrum.io/rpc",
+    blockExplorer: "https://sepolia.arbiscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "avalanche-fuji",
+    name: "Avalanche Fuji",
+    symbol: "AVAX",
+    rpcUrl: "https://api.avax-test.network/ext/bc/C/rpc",
+    blockExplorer: "https://testnet.snowtrace.io",
+    nativeCurrency: { name: "Avalanche", symbol: "AVAX", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "base-sepolia",
+    name: "Base Sepolia",
+    symbol: "BASE",
+    rpcUrl: "https://sepolia.base.org",
+    blockExplorer: "https://sepolia.basescan.org",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "codex-testnet",
+    name: "Codex Testnet",
+    symbol: "CDX",
+    rpcUrl: "https://testnet-rpc.codex.network",
+    blockExplorer: "https://testnet-explorer.codex.network",
+    nativeCurrency: { name: "Codex", symbol: "CDX", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "ethereum-sepolia",
+    name: "Ethereum Sepolia",
+    symbol: "ETH",
+    rpcUrl: "https://sepolia.infura.io/v3/YOUR_KEY",
+    blockExplorer: "https://sepolia.etherscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "linea-sepolia",
+    name: "Linea Sepolia",
+    symbol: "LINEA",
+    rpcUrl: "https://rpc.sepolia.linea.build",
+    blockExplorer: "https://sepolia.lineascan.build",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "optimism-sepolia",
+    name: "OP Sepolia",
+    symbol: "OP",
+    rpcUrl: "https://sepolia.optimism.io",
+    blockExplorer: "https://sepolia-optimistic.etherscan.io",
+    nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "polygon-amoy",
+    name: "Polygon PoS Amoy",
+    symbol: "MATIC",
+    rpcUrl: "https://rpc-amoy.polygon.technology",
+    blockExplorer: "https://amoy.polygonscan.com",
+    nativeCurrency: { name: "MATIC", symbol: "MATIC", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "solana-devnet",
+    name: "Solana Devnet",
+    symbol: "SOL",
+    rpcUrl: "https://api.devnet.solana.com",
+    blockExplorer: "https://explorer.solana.com/?cluster=devnet",
+    nativeCurrency: { name: "Solana", symbol: "SOL", decimals: 9 },
+    testnet: true,
+  },
+  {
+    id: "sonic-testnet",
+    name: "Sonic Testnet",
+    symbol: "SONIC",
+    rpcUrl: "https://testnet-rpc.sonic.network",
+    blockExplorer: "https://testnet-explorer.sonic.network",
+    nativeCurrency: { name: "Sonic", symbol: "SONIC", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "unichain-sepolia",
+    name: "Unichain Sepolia",
+    symbol: "UNI",
+    rpcUrl: "https://sepolia.unichain.org",
+    blockExplorer: "https://sepolia.explorer.unichain.org",
+    nativeCurrency: { name: "Unichain", symbol: "UNI", decimals: 18 },
+    testnet: true,
+  },
+  {
+    id: "worldchain-sepolia",
+    name: "World Chain Sepolia",
+    symbol: "WLD",
+    rpcUrl: "https://sepolia.worldchain.org",
+    blockExplorer: "https://sepolia.explorer.worldchain.org",
+    nativeCurrency: { name: "World", symbol: "WLD", decimals: 18 },
+    testnet: true,
+  },
+]
